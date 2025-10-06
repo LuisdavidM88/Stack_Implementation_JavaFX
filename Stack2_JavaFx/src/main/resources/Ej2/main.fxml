@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21.0.0" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Ej2.Ventana">
+    <top>
+        <Label text="Balanceo de paréntesis, llaves y corchetes — JavaFX" BorderPane.alignment="CENTER">
+            <padding><Insets topRightBottomLeft="8"/></padding>
+        </Label>
+    </top>
+
+    <center>
+        <VBox spacing="8" style="-fx-padding: 10;">
+            <HBox spacing="8">
+                <Button fx:id="btnEvaluar" text="Evaluar (Ctrl+Enter)"/>
+                <Label fx:id="lblRes" text="Pegue código y evalúe"/>
+            </HBox>
+
+            <SplitPane dividerPositions="0.6">
+                <AnchorPane>
+                    <children>
+                        <TextArea fx:id="txtCodigo" wrapText="false" AnchorPane.topAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="0.0"/>
+                    </children>
+                </AnchorPane>
+                <VBox spacing="6">
+                    <Label text="Conteo de aperturas:"/>
+                    <Label fx:id="lblParen" text="Aperturas '(' : 0"/>
+                    <Label fx:id="lblLlaves" text="Aperturas '{' : 0"/>
+                    <Label fx:id="lblCorchs" text="Aperturas '[' : 0"/>
+                    <Separator/>
+                    <Label text="Paso a paso:"/>
+                    <ListView fx:id="lstLog" prefHeight="200"/>
+                </VBox>
+            </SplitPane>
+        </VBox>
+    </center>
+</BorderPane>
