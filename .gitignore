@@ -1,0 +1,28 @@
+# ====================
+# Archivos de IntelliJ IDEA
+# ====================
+.idea/
+*.iml
+out/
+
+# ====================
+# Archivos compilados Java
+# ====================
+*.class
+
+# ====================
+# Directorios de Maven/Gradle
+# ====================
+target/
+build/
+
+# ====================
+# Archivos del sistema
+# ====================
+.DS_Store
+Thumbs.db
+
+# ====================
+# Logs
+# ====================
+*.log
